@@ -33,13 +33,13 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
         },
         "System": {
             "Platform": Platform,
-            "Version": VersionPlat
+            "Version": VersionPlat,
+            "Hostname": HostName
         },
     }
     # JSON에 쓰기.
     with open("Info.json", "w") as write_file:
         json.dump(Info, write_file, indent=4)
-
 # 정보를 출력하도록 정의합니다.
 def FamilyPrint():
     with open("Info.json") as read:
@@ -82,8 +82,8 @@ def SystemPrint():
         print("\n시스템 정보 표시\n")
         print("\플랫폼: " + data['System']['Platform'])
         print("OS 버전: " + data['System']['Version'])
+        print("호스트 이름: " + data['System']['Hostname'])
     return
-
 # JSON을 읽는다.
 def Read():
     # JSON 파일을 읽고 출력합니다.

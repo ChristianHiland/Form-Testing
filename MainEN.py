@@ -9,7 +9,6 @@ Version = 0.2
 
 # Letting the user chouse an option.
 Option = input("\nRead or Write? ")
-
 # Checking the option
 if Option.lower() == str("read"):
     # Reading the JSON.

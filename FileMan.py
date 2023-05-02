@@ -11,6 +11,7 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
     # Platform Info
     Platform = platform.system()
     VersionPlat = platform.version()
+    HostName = platform.node()
     # The data put into a JSON string.
     Info = {
         "Family": {
@@ -33,13 +34,13 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
         },
         "System": {
             "Platform": Platform,
-            "Version": VersionPlat
+            "Version": VersionPlat,
+            "Hostname": HostName
         },
     }
     # Writing to the JSON.
     with open("Info.json", "w") as write_file:
         json.dump(Info, write_file, indent=4)
-
 # Defines, to print the info out.
 def FamilyPrint():
     with open("Info.json") as read:
@@ -87,8 +88,9 @@ def SystemPrint():
         print("\nDisplaying System Info\n")
         print("\Platform: " + data['System']['Platform'])
         print("OS Version: " + data['System']['Version'])
+        print("HostName: " + data['System']['Hostname'])
     return
-
+# Reading the JSON
 def Read():
     # Reading The JSON File, and Printing It Out.
     with open("Info.json") as read_file:
