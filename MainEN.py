@@ -2,6 +2,7 @@
 # Importing Modules.
 import json
 import os
+import platform
 import FileMan
 
 # 버전 번호
@@ -24,8 +25,9 @@ elif Option.lower() == str("write"):
     FamilyName = input("What is your family name? ")
     FamilySize = input("How many people is in your family? ")
     FamilyDied = input("How many of them has died in your life? ")
-    os.system('clear')
-    UserName1 = input("What is your frist name? ")
+    if platform.system.lower() == str("linux"):
+        os.system('clear')
+    UserName1 = input("What is your first name? ")
     UserName2 = input("What is your last name? ")
     Email = input("What is your Email? ")
     DOB = input("What is your date of birth? ")
