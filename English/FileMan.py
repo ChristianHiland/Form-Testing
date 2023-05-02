@@ -3,6 +3,8 @@ import json
 import time
 import platform
 
+File = "Data/InfoEN.json"
+
 # Writing To The JSON.
 def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, Version):
     # Other Varables
@@ -39,11 +41,11 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
         },
     }
     # Writing to the JSON.
-    with open("Info.json", "w") as write_file:
+    with open(File, "w") as write_file:
         json.dump(Info, write_file, indent=4)
 # Defines, to print the info out.
 def FamilyPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         # Geting The Data
         data = json.load(read)
@@ -53,7 +55,7 @@ def FamilyPrint():
         print("Family Dead: " + data['Family']['Died'])
     return
 def UserPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         # Geting The Data
         data = json.load(read)
@@ -64,7 +66,7 @@ def UserPrint():
         print("DOB: " + data['User']['DOB'])
     return
 def FilePrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         # Geting The Data
         data = json.load(read)
@@ -72,7 +74,7 @@ def FilePrint():
         print("\nDate Made: " + data['File']['DateMade'])
     return
 def ProgramPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         # Geting The Data
         data = json.load(read)
@@ -81,7 +83,7 @@ def ProgramPrint():
         print("About: " + data['Program']['About'])
     return
 def SystemPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         # Geting The Data
         data = json.load(read)
@@ -93,7 +95,7 @@ def SystemPrint():
 # Reading the JSON
 def Read():
     # Reading The JSON File, and Printing It Out.
-    with open("Info.json") as read_file:
+    with open(File) as read_file:
         # Geting The Data
         data = json.load(read_file)
         Output = json.dumps(data, indent=4, separators=(',', ': '), sort_keys=True)

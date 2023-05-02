@@ -3,6 +3,8 @@ import json
 import time
 import platform
 
+File = "Data/InfoKO.json"
+
 # JSON에 쓰기.
 def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, Version):
     # 기타 변수
@@ -38,11 +40,11 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
         },
     }
     # JSON에 쓰기.
-    with open("Info.json", "w") as write_file:
+    with open(File, "w") as write_file:
         json.dump(Info, write_file, indent=4)
 # 정보를 출력하도록 정의합니다.
 def FamilyPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         data = json.load(read)
         print("\n가족 정보 표시")
@@ -51,7 +53,7 @@ def FamilyPrint():
         print("죽은 가족: " + data['Family']['Died'])
     return
 def UserPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         data = json.load(read)
         print("\n사용자 정보 인쇄")
@@ -61,14 +63,14 @@ def UserPrint():
         print("생년월일: " + data['User']['DOB'])  
     return
 def FilePrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         data = json.load(read)
         print("\n파일 정보 출력하기")
         print("\n만든 날짜: " + data['File']['DateMade'])
     return
 def ProgramPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         data = json.load(read)
         print("\n프로그램 정보 인쇄")
@@ -76,7 +78,7 @@ def ProgramPrint():
         print("소개: " + data['Program']['About'])
     return
 def SystemPrint():
-    with open("Info.json") as read:
+    with open(File) as read:
         # 데이터 얻기
         data = json.load(read)
         print("\n시스템 정보 표시\n")
@@ -87,7 +89,7 @@ def SystemPrint():
 # JSON을 읽는다.
 def Read():
     # JSON 파일을 읽고 출력합니다.
-    with open("Info.json") as read_file:
+    with open(File) as read_file:
         # 데이터 얻기
         data = json.load(read_file)
         Output = json.dumps(data, indent=4, separators=(',', ': '), sort_keys=True)
