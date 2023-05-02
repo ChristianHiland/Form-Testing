@@ -54,7 +54,7 @@ def UserPrint():
     with open("Info.json") as read:
         # 데이터 얻기
         data = json.load(read)
-        print("\nDisplaying User Info")
+        print("\n사용자 정보 인쇄")
         print("\nFirst Name: " + data['User']['FirstName'])
         print("Last Name: " + data['User']['LastName'])
         print("Email: " + data['User']['Email'])
@@ -64,14 +64,14 @@ def FilePrint():
     with open("Info.json") as read:
         # 데이터 얻기
         data = json.load(read)
-        print("\nDisplaying File Info")
+        print("\n파일 정보 출력하기")
         print("\nDate Made: " + data['File']['DateMade'])
     return
 def ProgramPrint():
     with open("Info.json") as read:
         # 데이터 얻기
         data = json.load(read)
-        print("\nDisplaying Program Info")
+        print("\n프로그램 정보 인쇄")
         print("\nVersion: " + data['Program']['Version'])
         print("About: " + data['Program']['About'])
     return
