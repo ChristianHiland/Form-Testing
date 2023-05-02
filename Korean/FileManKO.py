@@ -55,33 +55,33 @@ def UserPrint():
         # 데이터 얻기
         data = json.load(read)
         print("\n사용자 정보 인쇄")
-        print("\nFirst Name: " + data['User']['FirstName'])
-        print("Last Name: " + data['User']['LastName'])
-        print("Email: " + data['User']['Email'])
-        print("DOB: " + data['User']['DOB'])
+        print("\n이름: " + data['User']['FirstName'])
+        print("성: " + data['User']['LastName'])
+        print("이메일: " + data['User']['Email'])
+        print("생년월일: " + data['User']['DOB'])  
     return
 def FilePrint():
     with open("Info.json") as read:
         # 데이터 얻기
         data = json.load(read)
         print("\n파일 정보 출력하기")
-        print("\nDate Made: " + data['File']['DateMade'])
+        print("\n만든 날짜: " + data['File']['DateMade'])
     return
 def ProgramPrint():
     with open("Info.json") as read:
         # 데이터 얻기
         data = json.load(read)
         print("\n프로그램 정보 인쇄")
-        print("\nVersion: " + data['Program']['Version'])
-        print("About: " + data['Program']['About'])
+        print("\n버전: " + data['Program']['Version'])
+        print("소개: " + data['Program']['About'])
     return
 def SystemPrint():
     with open("Info.json") as read:
         # 데이터 얻기
         data = json.load(read)
-        print("\nDisplaying System Info\n")
-        print("\Platform: " + data['System']['Platform'])
-        print("OS Version: " + data['System']['Version'])
+        print("\n시스템 정보 표시\n")
+        print("\플랫폼: " + data['System']['Platform'])
+        print("OS 버전: " + data['System']['Version'])
     return
 
 # JSON을 읽는다.
@@ -95,7 +95,7 @@ def Read():
         Option = input("하나의 데이터 항목을 원하십니까? [예/아니요] ")
         if Option == str("아니요"):
             # 전체를 표시합니다.
-            print("\nDisplaying Info.json\n")
+            print("\nInfo.json을 표시하는 중\n")
             print(Output)
         else:
             # 사용자가 카테고리를 선택하게 하
