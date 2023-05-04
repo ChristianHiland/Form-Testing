@@ -46,7 +46,6 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
         json.dump(Info, write_file, indent=4)
 # Defines, to print the info out.
 def FamilyPrint():
-    File = "Data/InfoEN.json"
     with open(File) as read:
         # Geting The Data
         data = json.load(read)
@@ -56,7 +55,6 @@ def FamilyPrint():
         print("Family Dead: " + data['Family']['Died'])
     return
 def UserPrint():
-    File = "Data/InfoEN.json"
     with open(File) as read:
         # Geting The Data
         data = json.load(read)
@@ -67,7 +65,6 @@ def UserPrint():
         print("DOB: " + data['User']['DOB'])
     return
 def FilePrint():
-    File = "Data/InfoEN.json"
     with open(File) as read:
         # Geting The Data
         data = json.load(read)
@@ -75,7 +72,6 @@ def FilePrint():
         print("\nDate Made: " + data['File']['DateMade'])
     return
 def ProgramPrint():
-    File = "Data/InfoEN.json"
     with open(File) as read:
         # Geting The Data
         data = json.load(read)
@@ -85,7 +81,6 @@ def ProgramPrint():
         print("About: " + data['Program']['About'])
     return
 def SystemPrint():
-    File = "Data/InfoEN.json"
     with open(File) as read:
         # Geting The Data
         data = json.load(read)
@@ -96,7 +91,6 @@ def SystemPrint():
     return
 # Reading the JSON
 def Read():
-    File = "Data/InfoEN.json"
     # Reading The JSON File, and Printing It Out.
     with open(File) as read_file:
         # Geting The Data
