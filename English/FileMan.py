@@ -31,6 +31,7 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
             "DateMade": DateTime
         },
         "Program": {
+            "Name": "InfoJSON",
             "Version": Version,
             "About": "This is a simple program that tought me how to use a JSON file."
         },
@@ -79,7 +80,8 @@ def ProgramPrint():
         # Geting The Data
         data = json.load(read)
         print("\nDisplaying Program Info")
-        print("\nVersion: " + data['Program']['Version'])
+        print("\nName: " + data['Program']['Name'])
+        print("Version: " + data['Program']['Version'])
         print("About: " + data['Program']['About'])
     return
 def SystemPrint():
