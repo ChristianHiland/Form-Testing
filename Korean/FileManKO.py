@@ -30,6 +30,7 @@ def Write(FamilyName, FamilySize, FamilyDied, UserName1, UserName2, Email, DOB, 
             "DateMade": DateTime
         },
         "Program": {
+            "Name": "InfoJSON",
             "Version": Version,
             "About": "JSON 파일을 사용하는 방법을 가르쳐준 간단한 프로그램입니다."
         },
@@ -74,7 +75,8 @@ def ProgramPrint():
         # 데이터 얻기
         data = json.load(read)
         print("\n프로그램 정보 인쇄")
-        print("\n버전: " + data['Program']['Version'])
+        print("\n이름: " + data['Program']['Name'])
+        print("버전: " + data['Program']['Version'])
         print("소개: " + data['Program']['About'])
     return
 def SystemPrint():

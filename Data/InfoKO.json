@@ -1,0 +1,26 @@
+{
+    "Family": {
+        "Name": "미설정",
+        "Size": "미설정",
+        "Died": "미설정"
+    },
+    "User": {
+        "FirstName": "미설정",
+        "LastName": "미설정",
+        "Email": "미설정",
+        "DOB": "미설정"
+    },
+    "File": {
+        "DateMade": "미설정"
+    },
+    "Program": {
+        "Name": "InfoJSON",
+        "Version": "미설정",
+        "About": "JSON 파일을 사용하는 방법을 가르쳐준 간단한 프로그램입니다."
+    },
+    "System": {
+        "Platform": "미설정",
+        "Version": "미설정",
+        "Hostname": "미설정"
+    }
+}

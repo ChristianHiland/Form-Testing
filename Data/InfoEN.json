@@ -1,0 +1,26 @@
+{
+    "Family": {
+        "Name": "Not Set",
+        "Size": "Not Set",
+        "Died": "Not Set"
+    },
+    "User": {
+        "FirstName": "Not Set",
+        "LastName": "Not Set",
+        "Email": "Not Set",
+        "DOB": "Not Set"
+    },
+    "File": {
+        "DateMade": "Not Set"
+    },
+    "Program": {
+        "Name": "InfoJSON",
+        "Version": "Not Set",
+        "About": "This is a simple program that tought me how to use a JSON file."
+    },
+    "System": {
+        "Platform": "Not Set",
+        "Version": "Not Set",
+        "Hostname": "Not Set"
+    }
+}
