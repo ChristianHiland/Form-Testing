@@ -14,6 +14,7 @@ with open(LanguageJSON) as Info:
     Data = json.load(Info)
     if Data['Ran'].lower() == str("no"):
         system("pip install -r requirements.txt")
+        system("pip install --upgrade pip")
 
 
 # 'Loading' 
