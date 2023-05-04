@@ -2,7 +2,7 @@
 import json
 import os
 import platform
-import FileManKO
+from Korean import FileManKO
 
 def Run():
     # 버전 번호

@@ -2,7 +2,7 @@
 import json
 import os
 import platform
-import FileMan
+from English import FileMan
 
 def Run():
     # Version Number
