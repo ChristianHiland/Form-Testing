@@ -35,14 +35,14 @@ with open(LanguageJSON) as languagePicked:
                 KO.Run()
 with open(LanguageJSON) as languagePicked:
     Data = json.load(languagePicked)
-    if Data['Language'].lower() == str("not set"):
+    if Data['Ran'].lower() == str("no"):
         # This will make a JSON file with the user's language, if it hasn't been made yet.
         print("ENGLISH: KO or EN\n한국어: KO 또는 EN")
         language = input("KO/EN: ")
         # The Data Layout.
         SetupData = {
             "Language": language,
-            "Ran": "Ran"
+            "Ran": "Yes"
         }
         # Writing to the JSON file.
         with open(LanguageJSON, "w") as LanguageAdd:
