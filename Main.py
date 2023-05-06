@@ -40,13 +40,13 @@ with open(LanguageJSON) as languagePicked:
         print("ENGLISH: KO or EN\n한국어: KO 또는 EN")
         language = input("KO/EN: ")
         # The Data Layout.
-        data = {
+        SetupData = {
             "Language": language,
             "Ran": "Ran"
         }
         # Writing to the JSON file.
         with open(LanguageJSON, "w") as LanguageAdd:
-            json.dump(data, LanguageAdd, indent=4)
+            json.dump(SetupData, LanguageAdd, indent=4)
         if language.lower() == str("en"):
             EN.Run()
         elif language.lower() == str("ko"):

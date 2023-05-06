@@ -9,7 +9,7 @@ def Run():
     Version = 0.2
 
     # Letting the user chouse an option.
-    Option = input("\nRead or Write? ")
+    Option = input("Read or Write? ")
     # Checking the option
     if Option.lower() == str("read"):
         # Reading the JSON.

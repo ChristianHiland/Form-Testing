@@ -104,7 +104,7 @@ def Read():
             print(Output)
         else:
             # Letting the user pick a catgory
-            print("\nHere are the options:\n1.Family Info\n2.User Info.\n3. File Info\n4. Program Info\n5. System Info")
+            print("\nHere are the options:\n1. Family Info\n2. User Info.\n3. File Info\n4. Program Info\n5. System Info")
             OptionPrint = input("Option Number: ")
             if OptionPrint == str("1"):
                 # Printing Family Info

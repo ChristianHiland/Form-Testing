@@ -103,7 +103,7 @@ def Read():
             print(Output)
         else:
             # 사용자가 카테고리를 선택하게 하
-            print("\n옵션은 다음과 같습니다.\n1.가족 정보\n2.사용자 정보\n3. 파일 정보\n4. 프로그램 정보\n5. 시스템 정보")
+            print("\n옵션은 다음과 같습니다.\n1. 가족 정보\n2. 사용자 정보\n3. 파일 정보\n4. 프로그램 정보\n5. 시스템 정보")
             OptionPrint = input("O옵션 번호: ")
             if OptionPrint == str("1"):
                 # 가족 정보 인쇄

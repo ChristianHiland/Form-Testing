@@ -8,7 +8,7 @@ def Run():
     # 버전 번호
     Version = 0.2
     # 사용자가 옵션을 선택하도록 합니다.
-    Option = input("\n읽기 또는 쓰기? ")
+    Option = input("읽기 또는 쓰기? ")
     # 옵션 확인
     if Option == str("읽기"):
         # JSON을 읽는다.
